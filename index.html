@@ -1,0 +1,93 @@
+
+<html>
+  <head>
+    <title>Levente Juhász</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" type="image/png" href="384534547_1044272183419012_8206735391658617435_n.jpg" />
+  </head>
+  <body>
+    <!-- <div id="particles-js"></div> -->
+    <div id="main-container">
+      <h1>Hello | Szia</h1>
+      <h2>
+        My name is
+        <img
+          id="speaker"
+          class="icon"
+          src="speaker-logo.svg"
+          onclick="play()"
+        />
+        Levente Juhász
+      </h2>
+      <img id="image" src="384534547_1044272183419012_8206735391658617435_n.jpg" />
+      <ul id="social-media-icons">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/levente-juhasz-a647ba1b2/"
+            target="_blank"
+            ><img class="icon" src="linkedin-logo.svg"
+          /></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/LeventeJuhasz8" target="_blank"
+            ><img class="icon" src="twitter-logo.svg"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/leventejuhasz" target="_blank"
+            ><img class="icon" src="github-logo.svg"
+          /></a>
+        </li>
+      </ul>
+      <div id="description">
+        <p>
+          I'm a <span id="age"></span>-year-old, Hungary-born Software Engineer.
+        </p>
+        
+      </div>
+    
+      <h1 class="project">Projects</h1>
+
+      <section class="project-list">
+        <div class="project">
+            <img src="Képkivágás.PNG" alt="Project 1">
+            <div class="project-description">
+                <p>I developed an Airline Reservation System using Java Swing in 2021</p>
+            </div>
+        </div>
+        
+       
+
+
+
+    </div>
+    <audio id="name-pronunciation" src="synthesis.wav"></audio>
+    <!-- <script src="particles.js"></script> -->
+    <!-- <script src="app.js"></script> -->
+    <script src="main.js"></script>
+    <script>
+      window.onload = () => {
+        const birthYear = 2002;
+        const currentYear = new Date().getFullYear();
+        const age =
+          new Date() > new Date(`11/04/${currentYear}`)
+            ? currentYear - birthYear
+            : currentYear - birthYear - 1;
+        document.getElementById("age").innerText = `${age}`;
+      };
+    </script>
+
+
+
+  </body>
+</html>
